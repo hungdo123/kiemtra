@@ -1,0 +1,36 @@
+// --breakpoint-xs: 0;
+// --breakpoint-sm: 576px;
+// --breakpoint-md: 768px;
+// --breakpoint-lg: 992px;
+// --breakpoint-xl: 1200px;
+header
+	background: #000
+	&.active
+		background: rgba(#000,0.3)
+	span
+		color: #fff
+		border: 2px solid #fff
+		padding: .5rem
+	.navbar-nav
+		.nav-item
+			+pad(1rem 2rem)
+			.nav-link
+				text-align: center
+				color: #fff
+	+media-breakpoint-up(lg)
+		background: none
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+		z-index: 2
+		.navbar-nav
+			.nav-item
+				+pad(.5rem )
+				.nav-link
+					color: #fff
+					font-weight: bold
+				&:hover,&.active
+					.nav-link
+						background: #f2c73e
+						border-radius: 50%
